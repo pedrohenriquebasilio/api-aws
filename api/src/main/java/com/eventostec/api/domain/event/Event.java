@@ -1,4 +1,4 @@
-package com.eventostec.api.domain;
+package com.eventostec.api.domain.event;
 
 
 import jakarta.persistence.Entity;

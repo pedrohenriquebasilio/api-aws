@@ -1,7 +1,7 @@
 package com.eventostec.api.domain.coupon;
 
 
-import com.eventostec.api.domain.Event;
+import com.eventostec.api.domain.event.Event;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
