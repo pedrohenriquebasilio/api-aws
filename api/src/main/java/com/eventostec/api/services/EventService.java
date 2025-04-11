@@ -49,8 +49,12 @@ public class EventService {
         try {
             File file = this.convertMultipartToFile(multipartFile);
             s3Cliente.putObject(bucketName, imgName, file);
-        } catch (Exception e){}
-            return "";
+            file.delete();
+            return s3Cliente.getUrl(bucketName, imgName).toString();
+        } catch (Exception e){
+            System.out.println("Erro ao subir arquivo");
+            return  null;
+        }
     }
 
     private File convertMultipartToFile(MultipartFile file) throws IOException {
